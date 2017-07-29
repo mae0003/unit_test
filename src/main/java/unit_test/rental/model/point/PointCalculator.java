@@ -4,7 +4,7 @@ import unit_test.lesson.member.Member;
 
 public interface PointCalculator {
 	/**
-	 * ポイントを計算します
+	 * 繝昴う繝ｳ繝医ｒ險育ｮ励＠縺ｾ縺吶�
 	 */
 	int calculate(Member member);
 }

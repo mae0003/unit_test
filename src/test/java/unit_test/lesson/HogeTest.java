@@ -18,7 +18,7 @@ public class HogeTest {
 	}
 
 	@Test
-	public void getHogeTest_³íŒn() {
+	public void getHogeTest_æ­£å¸¸() {
 		Hoge sut =new Hoge();
 		
 		String actual = sut.getHuga("Hoge");
@@ -28,7 +28,7 @@ public class HogeTest {
 	}
 
 	@Test
-	public void getHogeTest_ˆÙíŒn() {
+	public void getHogeTest_ç•°å¸¸() {
 		Hoge sut =new Hoge();
 		
 		String actual = sut.getHuga("Hoga");

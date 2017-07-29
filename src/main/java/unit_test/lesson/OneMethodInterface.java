@@ -1,12 +1,12 @@
 package unit_test.lesson;
 
 /**
- * ˆê‚Â‚Ìƒƒ\ƒbƒh‚ğ‚Á‚½ƒCƒ“ƒ^[ƒtƒF[ƒX‚Å‚·
+ * ã²ã¨ã¤ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’æŒã¤ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã§ã™
  */
 public interface OneMethodInterface {
 	/**
-	 * ƒƒO‚ğo—Í‚µ‚Ü‚· ‰½‚©•¶š‚ğo—Í‚µ‚Ä‚­‚¾‚³‚¢
-	 * @param value o—Í’l
+	 * ãƒ­ã‚°ã‚’å‡ºåŠ›ã—ã¾ã™
+	 * @param value å‡ºåŠ›å€¤
 	 */
 	void logout(String value);
 }

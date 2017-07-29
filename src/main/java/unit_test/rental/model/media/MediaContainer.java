@@ -7,16 +7,16 @@ public class MediaContainer {
 	private List<Media> mediaList;
 	
 	/**
-	 * ‚·‚×‚Ä‚ÌƒƒfƒBƒA‚ÌƒŠƒXƒg‚ğæ“¾‚µ‚Ü‚·B
-	 * @return ƒƒfƒBƒAƒŠƒXƒg
+	 * ã™ã¹ã¦ã®ãƒ¡ãƒ‡ã‚£ã‚¢ã‚’å–å¾—ã—ã¾ã™
+	 * @return ãƒ¡ãƒ‡ã‚£ã‚¢ã®ãƒªã‚¹ãƒˆ
 	 */
 	public List<Media> getAll(){
 		return mediaList;
 	}
 	
 	/**
-	 * ƒŒƒ“ƒ^ƒ‹’†‚ÌƒƒfƒBƒA‚ÌƒŠƒXƒg‚ğæ“¾‚µ‚Ü‚·B
-	 * @return
+	 * ãƒ¬ãƒ³ã‚¿ãƒ«ä¸­ã®ãƒ¡ãƒ‡ã‚£ã‚¢ã®ãƒªã‚¹ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
+	 * @return ãƒ¡ãƒ‡ã‚£ã‚¢ã®ãƒªã‚¹ãƒˆ
 	 */
 	public List<Media> getRentaled() {
 		// todo:
@@ -24,8 +24,8 @@ public class MediaContainer {
 	}
 	
 	/**
-	 * w’è‚Ì–¼‘O‚Æí•Ê‚ÌƒƒfƒBƒA‚ğæ“¾‚µ‚Ü‚·B
-	 * @return
+	 * æŒ‡å®šã•ã‚ŒãŸã‚¿ã‚¤ãƒˆãƒ«ã®ãƒ¡ãƒ‡ã‚£ã‚¢ã‚’å–å¾—ã—ã¾ã™ã€‚
+	 * @return ãƒ¡ãƒ‡ã‚£ã‚¢
 	 */
 	public Media get(String name) {
 		return null;

@@ -1,7 +1,7 @@
 package unit_test.lesson.member;
 
 /**
- * 会員インターフェース
+ * 莨壼藤繧､繝ｳ繧ｿ繝ｼ繝輔ぉ繝ｼ繧ｹ縺ｧ縺吶�
  */
 public interface Member {
 

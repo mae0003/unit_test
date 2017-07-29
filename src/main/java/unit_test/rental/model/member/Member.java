@@ -7,8 +7,8 @@ public class Member {
 	public String rank;
 	
 	/**
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-	 * @param name –¼‘O
+	 * ä¼šå“¡ã‚¯ãƒ©ã‚¹ã§ã™
+	 * @param name ä¼šå“¡å
 	 * @param id   ID 
 	 */
 	public Member(String name, String id, String rank) {

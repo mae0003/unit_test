@@ -1,18 +1,18 @@
 package unit_test.lesson;
 
 /**
- * ‚Q‚Â‚Ìƒƒ\ƒbƒh‚ğ’è‹`‚µ‚½ƒCƒ“ƒ^[ƒtƒF[ƒX
+ * ï¼’ã¤ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’æŒã¤ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã§ã™
  */
 public interface TwoMethodInterface {
 	
 	/**
-	 * ƒƒO‚ğo—Í‚µ‚Ü‚· ‰½‚©•¶š‚ğo—Í‚µ‚Ä‚­‚¾‚³‚¢
-	 * @param value o—Í’l
+	 * ãƒ­ã‚°ã‚’å‡ºåŠ›ã—ã¾ã™
+	 * @param value å‡ºåŠ›å€¤
 	 */
 	void logout(String value);
 	
 	/**
-	 * ID ‚ğæ“¾‚µ‚Ü‚·B ‰½‚©”š‚ğ•Ô‚µ‚Ä‚­‚¾‚³‚¢B
+	 * ID ã‚’å–å¾—ã—ã¾ã™
 	 */
 	void getId();
 	
