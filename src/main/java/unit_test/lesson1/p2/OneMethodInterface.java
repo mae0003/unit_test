@@ -1,4 +1,4 @@
-package unit_test.lesson;
+package unit_test.lesson1.p2;
 
 /**
  * ひとつのメソッドを持つインターフェースです
