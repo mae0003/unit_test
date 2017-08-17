@@ -1,6 +1,6 @@
 package unit_test.lesson1.p1;
 
-public class GoldMember extends Member {
+public class GoldMember implements Member {
 	
 	@Override
 	public int calculatePoint(int basePoint) {

@@ -31,13 +31,13 @@ public class HogeTest {
 		assertThat(actual, is(expected));
 	}
 
-//	@Test
-//	public void getHogeTest_nullの場合() {
-//		Hoge sut =new Hoge();
-//		
-//		String actual = sut.getHuga(null);
-//		String expected = "";
-//		
-//		assertThat(actual, is(expected));
-//	}
+	@Test
+	public void getHogeTest_nullの場合() {
+		Hoge sut =new Hoge();
+		
+		String actual = sut.getHuga(null);
+		String expected = "";
+		
+		assertThat(actual, is(expected));
+	}
 }

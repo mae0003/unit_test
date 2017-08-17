@@ -15,9 +15,7 @@ public class BadContext {
 		if (isCampaine) {
 			if (member.type == "gold") {
 				return basePoint * 3;
-			}
-			
-			if (member.type == "silver") {
+			} else if (member.type == "silver") {
 				return basePoint * 2;
 			}
  		}

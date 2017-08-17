@@ -22,7 +22,12 @@ public class ContextTest {
 
 	@Test
 	public void culculatePointTest() {
-		Member member = new GoldMember();
+		Member member = new Member() {		
+			@Override
+			public int calculatePoint(int basePoint) {
+				return 0;
+			}
+		};
 		
 		System.out.println(Context.culculatePoint(member, true, 1000));
 		System.out.println(Context.culculatePoint(member, false, 1000));

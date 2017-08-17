@@ -1,5 +1,7 @@
 package unit_test.lesson1.p2;
 
+import java.util.Arrays;
+
 public class Controller {
 	private OneMethodInterface methodInterface;
 	private TestInterface testInterface;
@@ -21,16 +23,14 @@ public class Controller {
 	private Controller(TestInterface2 testInterface1) {
 		super();
 		this.testInterface2 = testInterface1;
+		
+//		Arrays.asList("aa")
+//			.stream()
+//			.filter(item -> item.isEmpty())
 	}
 
 	static Controller createController() {
-		OneMethodInterface temp = new OneMethodInterface() {
-			@Override
-			public void logout(String value) {
-				System.out.println("OneMethodInterface" + value);
-			}
-		};
-
+		OneMethodInterface temp = value -> {};
 		return new Controller(temp);
 	}
 	
