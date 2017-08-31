@@ -5,6 +5,7 @@ public class Member {
 	public String name;
 	public String id;
 	public String rank;
+	public int point = 0;
 	
 	/**
 	 * 会員クラスです

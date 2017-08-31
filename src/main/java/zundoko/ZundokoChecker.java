@@ -1,12 +1,15 @@
 package zundoko;
 
-import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 
+/**
+ * ズンドコチェッカー 
+ * @see 
+ */
 public class ZundokoChecker {
 	
 	public void zundoko() {
@@ -27,6 +30,6 @@ public class ZundokoChecker {
         	System.out.println(builder.toString());
         	if (builder.toString().equals("ズンズンズンズンドコ")) break;
         }
-        System.out.println("キ・ヨ・シ❕");
+        System.out.println("キ・ヨ・シ!");
 	}
 }

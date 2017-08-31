@@ -1,11 +1,11 @@
 package unit_test.rental.model.accounting;
 
-import java.lang.reflect.Member;
 import java.util.List;
 import java.util.Map;
 
 import unit_test.rental.model.media.Dvd;
 import unit_test.rental.model.media.Media;
+import unit_test.rental.model.member.Member;
 
 public class RentalReceipt {
 

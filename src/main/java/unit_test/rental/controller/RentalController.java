@@ -1,6 +1,5 @@
-package unit_test.rental.controller.media;
+package unit_test.rental.controller;
 
-import java.lang.reflect.Member;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -13,6 +12,7 @@ import javax.print.attribute.standard.Media;
 import org.apache.commons.lang3.time.DateUtils;
 
 import unit_test.rental.model.media.DvdContainer;
+import unit_test.rental.model.member.Member;
 import unit_test.rental.model.accounting.RentalReceipt;
 import unit_test.rental.model.media.Dvd;
 
@@ -43,6 +43,8 @@ public class RentalController {
 	}
 	
 	List<Date> campaineDate;
+
+	/** レンタル中の DVD のレンタル情報 */ 
 	Map<Dvd, RentalInfo> rentalMap = new HashMap<>();
 	
 	/**
@@ -74,20 +76,23 @@ public class RentalController {
 			if (new Date().compareTo(DateUtils.addDays(rereaseDate, 30)) < 0) {
 				price =+ 100;
 			}
-			
-			// ポイントの付与
-			if () {
-				
-			} else {
-				
-			}
-			
+						
 			prices.add(price);
 			
 			// レンタル情報の登録
 			rentalMap.put(dvd, new RentalInfo(member, rentalDay));
 		}
-		
+
+		int totalAmount = prices.stream().mapToInt(item-> item.intValue()).sum();
+		// ポイントの付与
+		if (member.rank == "gold") {
+			member.point += totalAmount * 0.2;
+		} else if (member.rank == "silver") {
+			member.point += totalAmount * 0.15;
+		} else {
+			member.point += totalAmount * 0.1;
+		}
+
 		return RentalReceipt.create(member, dvds, prices);
 	}
 }
