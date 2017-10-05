@@ -6,30 +6,30 @@ import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 
+import testcode.ConstData;
+
 /**
  * ズンドコチェッカー 
  * @see 
  */
 public class ZundokoChecker {
 	
-	public void zundoko() {
-        final List<String> zundoko = Arrays.asList("ズン", "ドコ");
-        Random rand = new Random();
-        Queue<String> queue = new ArrayBlockingQueue<>(5);
-        
-        while(true) {
-        	String phrase = zundoko.get(rand.nextInt(2));
-        	if (!queue.offer(phrase)) {
-        		queue.remove();
-        		queue.add(phrase);
-        	}
-        	
-        	StringBuilder builder = new StringBuilder();
-        	queue.forEach(item -> builder.append(item));
-        	
-        	System.out.println(builder.toString());
-        	if (builder.toString().equals("ズンズンズンズンドコ")) break;
+    Queue<String> queue = new ArrayBlockingQueue<>(ConstData.FIVE);
+
+    public String zundoko(String phrase) {
+
+        if (!queue.offer(phrase)) {
+            queue.remove();
+            queue.add(phrase);
         }
-        System.out.println("キ・ヨ・シ!");
-	}
+
+        StringBuilder builder = new StringBuilder();
+        queue.forEach(item -> builder.append(item));
+
+        if (builder.toString().equals("ズンズンズンズンドコ")) {
+            return "キヨシ";
+        }
+
+        return null;
+    }
 }
