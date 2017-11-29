@@ -1,13 +1,19 @@
 package testcode;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.hamcrest.CoreMatchers.anyOf;
+import static org.hamcrest.CoreMatchers.hasItems;
 import static org.junit.Assert.*;
-
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.Collectors;
 
+import org.hamcrest.Matcher;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -15,14 +21,15 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.yaml.snakeyaml.Yaml;
 
-import com.google.common.collect.LinkedHashMultiset;
 
 public class MemberContainerTest {
 
-    private IMemberContainer sut;
+    private MemberContainer sut;
+    private static List<Member> members;
     
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
+        members = createMembers();
     }
 
     @AfterClass
@@ -31,12 +38,11 @@ public class MemberContainerTest {
 
     @Before
     public void setUp() throws Exception {
-        List<Member> members = createMembers();
         sut = new MemberContainer(members);
     }
 
-    private List<Member> createMembers() {
-        InputStream ios = this.getClass().getResourceAsStream("member.yaml");
+    private static List<Member> createMembers() {
+        InputStream ios = MemberContainerTest.class.getResourceAsStream("member.yaml");
         Yaml yaml = new Yaml();
         // YAMLから読み込んだドキュメント情報
         List<Member> members = new ArrayList<>();
@@ -51,8 +57,21 @@ public class MemberContainerTest {
     }
 
     @Test
-    public void test() {
-        sut.getAdultMembers().forEach(item -> System.out.println(item.name));
+    public void getAdultTest() {
+        List<Member> actual = sut.getAdultMembers();
+        
+        assertThat(actual, hasItems(new Member("ジョージ", 89)));
+        assertThat(actual, hasItems(new Member("仲本", 20)));
+        assertThat("AAA", anyOf(is("AAA"), not("BBB")));
+        assertThat("AAA", anyOf(is("BBB"), not("BBB")));
+        assertThat("AAA", anyOf(is("BBB"), not("AAA")));
+        assertThat("AAA", anyOf(is("AAA")));
+        assertThat("AAA", is("AAA"));
+    }
+
+    @Test
+    public void getChildTest() {
+        
     }
 
 }
