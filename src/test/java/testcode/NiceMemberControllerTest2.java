@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import testcode.NiceMemberController.Type;
+import testcode.item.DvdItem;
 import testcode.item.Item;
 
 public class NiceMemberControllerTest2 {
@@ -65,7 +66,7 @@ public class NiceMemberControllerTest2 {
     }
     
     private static List<Item> createItems() {
-        return Arrays.asList(Item.of("Gifted", 400), Item.of("湯を沸かすほどの熱い愛", 330));
+        return Arrays.asList(DvdItem.of("Gifted", 400), DvdItem.of("湯を沸かすほどの熱い愛", 330));
     }
     
 }

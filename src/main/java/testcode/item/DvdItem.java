@@ -14,7 +14,7 @@ public class DvdItem implements Item {
         this.price = price;
     }
 
-    static Item of(String name, int price) {
+    public static Item of(String name, int price) {
         return new DvdItem(name, price);
     }
 
